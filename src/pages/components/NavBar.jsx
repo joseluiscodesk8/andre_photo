@@ -5,6 +5,7 @@ import styles from "../../styles/index.module.scss";
 const NavBar = () => {
 
     const [menuOpen, setMenuOpen] = useState(0);
+    let size = 70;
 
   return (
     <>
@@ -13,10 +14,10 @@ const NavBar = () => {
         <section>
           <picture>
             <Image
-              src="/camara.png"
+              src="/logowhite.png"
               alt="icon"
-              width={50}
-              height={50}
+              width={100}
+              height={80}
               property
             />
           </picture>
