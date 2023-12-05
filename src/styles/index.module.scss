@@ -1,0 +1,73 @@
+.menuPhoto {
+    display: flex;
+    justify-content: space-around;
+
+    & section {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    & picture:nth-child(2):active {
+        scale: 1.1;
+    }
+
+    & ul {
+        top: 50px;
+        width: 100%;
+        position: absolute;
+        color: #ccc;
+        
+        & .menuOpen {
+            display: grid;
+            top: 0;
+            position: relative;
+            place-content: center;
+            height: 60px;
+            box-shadow: inset 0 -2px 2px #8d8989;
+            transition: 0.5s ease-in-out;
+        }
+
+        & .menuClosed {
+            display: grid;
+            top: -400px;
+            position: relative;
+            place-content: center;
+            height: 60px;
+            transition: 0.5s ease-in-out;
+        }
+
+        & .menuOpen:nth-child(2) {
+            transition-delay: 0.1s; /* Un retraso de 0.2 segundos para el segundo elemento */
+          }
+
+          & .menuOpen:nth-child(3) {
+            transition-delay: 0.2s; /* Un retraso de 0.3 segundos para el tercer elemento */
+          }
+    
+          & .menuOpen:nth-child(4) {
+            transition-delay: 0.3s; /* Un retraso de 0.4 segundos para el cuarto elemento */
+          }
+    
+          & .menuOpen:nth-child(5) {
+            transition-delay: 0.4s; /* Un retraso de 0.5 segundos para el quinto elemento */
+          }
+
+          & .menuClosed:nth-child(2) {
+            transition-delay: 0.1s; /* Un retraso de 0.2 segundos para el segundo elemento */
+          }
+    
+          & .menuClosed:nth-child(3) {
+            transition-delay: 0.2s; /* Un retraso de 0.3 segundos para el tercer elemento */
+          }
+    
+          & .menuClosed:nth-child(4) {
+            transition-delay: 0.3s; /* Un retraso de 0.4 segundos para el cuarto elemento */
+          }
+    
+          & .menuClosed:nth-child(5) {
+            transition-delay: 0.4s; /* Un retraso de 0.5 segundos para el quinto elemento */
+          }
+    }
+
+}
