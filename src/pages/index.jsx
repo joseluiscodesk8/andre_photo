@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import NavBar from './components/NavBar'
+import styles from '../styles/index.module.scss'
 import { Inter } from 'next/font/google'
 
 
@@ -15,7 +14,34 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar />
+
+      <main className={styles.andres}>
+        <h1>My Work</h1>
+        <section
+          style={{
+            position: "relative",
+            paddingBottom: "56.25%",
+            height: 0,
+            overflow: "hidden",
+          }}
+        >
+          {/* Establece estilos en línea para hacer el iframe responsive */}
+          <iframe
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            src="https://www.youtube.com/embed/ZCdWpndXhLg"
+            title="YouTube Video Player"
+            frameBorder="0"
+            allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </section>
+      </main>
     </>
-  )
+  );
 }
