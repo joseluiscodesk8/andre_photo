@@ -1,11 +1,13 @@
-import Head from 'next/head'
-import styles from '../styles/index.module.scss'
-import { Inter } from 'next/font/google'
+import Head from "next/head";
+import styles from "../styles/index.module.scss";
+import { useMenuContext } from "../context/MenuContext";
+import { Inter } from "next/font/google";
 
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const { menuOpen } = useMenuContext();
+
   return (
     <>
       <Head>
@@ -15,25 +17,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.andres}>
+      <main className={`${styles.andres} ${menuOpen ? styles.layoutOpen : ""}`}>
         <h1>My Work</h1>
-        <section
-          style={{
-            position: "relative",
-            paddingBottom: "56.25%",
-            height: 0,
-            overflow: "hidden",
-          }}
-        >
-          {/* Establece estilos en línea para hacer el iframe responsive */}
+        <p>cada imagen es una narrativa visual que va más allá de las palabras, congelando instantes fugaces en el tiempo. Este arte permite explorar la belleza en los detalles cotidianos, revelar historias únicas y transmitir emociones profundas a través de composiciones visuales. la sensibilidad artística para ver el mundo de manera única y compartir esa perspectiva con los demás. </p>
+        <section>
           <iframe
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-            }}
             src="https://www.youtube.com/embed/ZCdWpndXhLg"
             title="YouTube Video Player"
             frameBorder="0"
