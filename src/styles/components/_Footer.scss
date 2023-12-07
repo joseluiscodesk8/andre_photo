@@ -1,3 +1,27 @@
-// .feet {
-//     border: 1px solid;
-// }
+.feet {
+    width: 100%;
+    height: 40vh;
+    position: absolute;
+    bottom: -40%;
+    //border: 1px solid;
+
+    & section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10px;
+        width: 95%;
+        margin: auto;
+        height: 100%;
+        //border: 1px solid #fff;
+        background-image: url("/equipo1.png");
+        background-size: 150px;
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+
+        & span {
+            display: flex;
+            color: #fff;
+        }
+    }
+}

@@ -7,23 +7,24 @@
   justify-content: space-between;
   position: relative;
   width: 90%;
-  height: 600px;
+  height: 370px;
   margin: auto;
   transform: translate(0, 105px);
   opacity: 1;
+  color: #ffffff;
   filter: blur(initial);
   transition: 0.5s ease-in;
   //border: 1px solid;
 
   & p {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: 800;
     font-family: monospace;
   }
 
   & section {
-    height: 270px;
-    border: 1px solid;
+    //height: 270px;
+    //border: 1px solid;
 
     & iframe {
       width: 100%;
@@ -39,7 +40,7 @@
   justify-content: space-between;
   position: relative;
   width: 90%;
-  height: 600px;
+  height: 370px;
   margin: auto;
   transform: translate(0, 105px);
   opacity: 0.2;

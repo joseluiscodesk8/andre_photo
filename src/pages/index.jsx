@@ -19,7 +19,7 @@ export default function Home() {
 
       <main className={`${styles.andres} ${menuOpen ? styles.layoutOpen : ""}`}>
         <h1>My Work</h1>
-        <p>cada imagen es una narrativa visual que va más allá de las palabras, congelando instantes fugaces en el tiempo. Este arte permite explorar la belleza en los detalles cotidianos, revelar historias únicas y transmitir emociones profundas a través de composiciones visuales. la sensibilidad artística para ver el mundo de manera única y compartir esa perspectiva con los demás. </p>
+        <p>Cada imagen es una narrativa visual que va más allá de las palabras, congelando instantes fugaces en el tiempo. Este arte permite explorar la belleza en los detalles cotidianos, revelar historias únicas y transmitir emociones profundas a través de composiciones visuales. la sensibilidad artística para ver el mundo de manera única y compartir esa perspectiva con los demás. </p>
         <section>
           <iframe
             src="https://www.youtube.com/embed/ZCdWpndXhLg"
