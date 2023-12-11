@@ -1,27 +1,46 @@
 .feet {
     width: 100%;
-    height: 40vh;
+    max-width: 600px;
+    height: 30vh;
+    padding: 1%;
     position: absolute;
-    bottom: -40%;
-    //border: 1px solid;
+    bottom: 0;
+    // border: 1px solid;
 
     & section {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        gap: 10px;
+        justify-content: center;
+        gap: 25px;
         width: 95%;
         margin: auto;
         height: 100%;
-        //border: 1px solid #fff;
-        background-image: url("/equipo1.png");
+        // border: 1px solid #fff;
+        background-image: url("/lens.png");
         background-size: 150px;
         background-repeat: no-repeat;
         background-position: 100% 100%;
 
         & span {
             display: flex;
+            justify-content: space-between;
             color: #fff;
+            font-family: monospace;
+            font-size: .9rem;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px #000;
+        }
+
+        & span:nth-child(1) {
+            width: 150px;
+        }
+
+        & span:nth-child(2) {
+            width: 230px;
+        }
+
+        & span:nth-child(3) {
+            width: 150px;
         }
     }
 }
