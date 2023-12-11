@@ -1,0 +1,19 @@
+.photos {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 415px;
+  margin: 20px auto;
+  overflow: hidden;
+  padding: 2%;
+  border-radius: 15px;
+  box-shadow: inset 0 0 15px #000;
+  //border: 1px solid #fff;
+
+  & picture {
+    & img {
+      width: 100%;
+      border-radius: 15px;
+    }
+  }
+}

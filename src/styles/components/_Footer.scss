@@ -1,11 +1,9 @@
 .feet {
     width: 100%;
-    max-width: 600px;
-    height: 30vh;
+    // height: 30vh;
     padding: 1%;
-    position: absolute;
-    bottom: 0;
-    // border: 1px solid;
+    position: relative;
+    //border: 1px solid;
 
     & section {
         display: flex;
@@ -13,9 +11,10 @@
         justify-content: center;
         gap: 25px;
         width: 95%;
+        max-width: 400px;
         margin: auto;
         height: 100%;
-        // border: 1px solid #fff;
+        //border: 1px solid #fff;
         background-image: url("/lens.png");
         background-size: 150px;
         background-repeat: no-repeat;

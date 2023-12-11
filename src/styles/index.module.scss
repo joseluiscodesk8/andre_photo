@@ -1,22 +1,22 @@
 @use "./components/Navbar";
+@use "./components/Photos";
 @use "./components/Footer";
 
 .andres {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 30px;
   position: relative;
   width: 75%;
   max-width: 500px;
-  height: 250px;
+  height: 320px;
   margin: auto;
-  transform: translate(0, 105px);
   opacity: 1;
   color: #ffffff;
   // overflow: hidden;
   filter: blur(initial);
   transition: 0.5s ease-in;
-  // border: 1px solid;
+  //border: 1px solid;
 
   & p {
     font-size: 0.8rem;
@@ -39,12 +39,10 @@
 .layoutOpen {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: relative;
   width: 75%;
-  height: 250px;
+  height: 320px;
   margin: auto;
-  transform: translate(0, 105px);
   opacity: 0.2;
   filter: blur(10px);
 }
