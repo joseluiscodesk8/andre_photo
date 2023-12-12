@@ -24,7 +24,7 @@ const Photos = () => {
 
   return (
     <>
-      <main className={`${styles.Photos} ${menuOpen ? styles.layoutOpen : ""}`}>
+      <main className={`${styles.Photos} ${menuOpen ? styles.PhotosOpacity : ""}`}>
       <section className={styles.slider}>
         <button className={styles.prevBtn} onClick={prevSlide}>
           &lt;
