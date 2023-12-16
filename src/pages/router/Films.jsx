@@ -1,8 +1,12 @@
-import { useContext } from "react";
+import { useRef, useContext } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCreative } from 'swiper/modules';
 import { useMenuContext } from "@/context/MenuContext";
 import Image from "next/image";
 import videos from "../modelos/videos";
 import styles from "../../styles/index.module.scss";
+import 'swiper/css';
+import 'swiper/css/effect-creative';
 
 const Films = () => {
   const { menuOpen } = useMenuContext();
@@ -25,8 +29,25 @@ const Films = () => {
           </picture>
 
           <section>
+            <Swiper
+             grabCursor={true}
+             effect={'creative'}
+             creativeEffect={{
+              prev: {
+                shadow: true,
+                translate: ['-120%', 0, -500],
+              },
+              next: {
+                shadow: true,
+                translate: ['120%', 0, -500],
+              },
+            }}
+             modules={[EffectCreative]}
+             className="mySwiper"
+            >
             {videos.map((url, index) => (
-              <div key={index}>
+             <SwiperSlide key={index}>
+               <section>
                 <iframe
                   src={url.url}
                   title="YouTube Video Player"
@@ -35,8 +56,11 @@ const Films = () => {
                   allowFullScreen
                 ></iframe>
                 <h2>{url.tittle}</h2>
-              </div>
+                <span></span>
+              </section>
+             </SwiperSlide>
             ))}
+            </Swiper>
           </section>
         </main>
       </section>
