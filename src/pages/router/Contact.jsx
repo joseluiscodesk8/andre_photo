@@ -1,15 +1,22 @@
-import { useState, useRef, useContext } from "react";
+import { useState, useRef, useContext, useEffect } from "react";
 import { useMenuContext } from "@/context/MenuContext";
 import Image from "next/image";
 import styles from "../../styles/index.module.scss";
 
 const Contact = () => {
-  const { menuOpen } = useMenuContext();
+  const { menuOpen, toggleMenu } = useMenuContext();
+
+  useEffect(() => {
+    if (menuOpen) {
+      toggleMenu();
+    }
+  }, []);
 
   return (
     <section
       className={`${styles.Contact} ${menuOpen ? styles.Opacity : ""}`}
     >
+      <main>
       <picture>
         <Image
           src="https://static.wixstatic.com/media/fac730_9fa537eb9a3247e4a65cc2d31f1b71fb~mv2.jpg/v1/fill/w_1189,h_440,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/fac730_9fa537eb9a3247e4a65cc2d31f1b71fb~mv2.jpg"
@@ -36,6 +43,7 @@ const Contact = () => {
 
         <button type="submit">enviar</button>
       </form>
+      </main>
     </section>
   );
 };

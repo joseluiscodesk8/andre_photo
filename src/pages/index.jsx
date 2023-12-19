@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import styles from "../styles/index.module.scss";
 import { useMenuContext } from "../context/MenuContext";
@@ -6,7 +7,13 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const { menuOpen } = useMenuContext();
+  const { menuOpen, toggleMenu } = useMenuContext();
+
+  useEffect(() => {
+    if (menuOpen) {
+      toggleMenu();
+    }
+  }, []);
 
   return (
     <>

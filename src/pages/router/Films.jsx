@@ -1,4 +1,4 @@
-import { useRef, useContext } from "react";
+import { useRef, useContext, useEffect } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCreative } from 'swiper/modules';
 import { useMenuContext } from "@/context/MenuContext";
@@ -9,7 +9,13 @@ import 'swiper/css';
 import 'swiper/css/effect-creative';
 
 const Films = () => {
-  const { menuOpen } = useMenuContext();
+  const { menuOpen, toggleMenu } = useMenuContext();
+
+  useEffect(() => {
+    if (menuOpen) {
+      toggleMenu();
+    }
+  }, []);
 
   return (
     <>

@@ -1,4 +1,4 @@
-import { useContext, useState, useRef } from "react";
+import { useContext, useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
 import Image from "next/image";
@@ -9,7 +9,13 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 
 const Photos = () => {
-  const { menuOpen } = useMenuContext();
+  const { menuOpen, toggleMenu } = useMenuContext();
+
+  useEffect(() => {
+    if (menuOpen) {
+      toggleMenu();
+    }
+  }, []);
 
   return (
     <>

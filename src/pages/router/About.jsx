@@ -1,15 +1,22 @@
-import { useRef, useContext } from "react";
+import { useRef, useContext, useEffect } from "react";
 import Image from "next/image";
 import { useMenuContext } from "@/context/MenuContext";
 import styles from "../../styles/index.module.scss";
 
 const About = () => {
-    const { menuOpen } = useMenuContext();
+    const { menuOpen, toggleMenu } = useMenuContext();
+
+    useEffect(() => {
+      if (menuOpen) {
+        toggleMenu();
+      }
+    }, []);
+
   return (
     <section
       className={`${styles.About} ${menuOpen ? styles.Opacity : ""}`}
     >
-      <main>
+      {/* <main>
         <h1>I am Andres Niño.</h1>
         <picture>
           <Image
@@ -25,7 +32,7 @@ const About = () => {
           variety of facets that can go from directing music videos to
           documentaries, portrait photography to weddings.
         </p>
-      </main>
+      </main> */}
     </section>
   );
 };
