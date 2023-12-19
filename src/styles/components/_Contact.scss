@@ -1,0 +1,57 @@
+.Contact {
+  max-width: 500px;
+  color: #fff;
+  font-family: monospace;
+  text-shadow: 0 0 15px #000;
+  //   border: 1px solid #ccc;
+
+  & picture {
+    display: flex;
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    padding: 2%;
+    border-radius: 15px;
+    box-shadow: inset 0 15px 15px #202020;
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 5px 5px #202020;
+    }
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    width: 95%;
+    height: 330px;
+    padding: 2%;
+    margin: auto;
+    border-radius: 15px;
+    background-image: url("/negativo2.png");
+    background-size: 100% 100%;
+    // border: 1px solid #ff00ff;
+
+    & .comentario {
+      width: 65%;
+      max-width: 290px;
+      padding: 2%;
+
+      input {
+        width: 100%;
+        height: 100px;
+        border-radius: 5px;
+      }
+    }
+
+    & button {
+      width: 50%;
+    }
+  }
+}

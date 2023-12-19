@@ -13,7 +13,7 @@ const Photos = () => {
 
   return (
     <>
-      <section className={`${styles.Photos} ${menuOpen ? styles.PhotosOpacity : ""}`}>
+      <section className={`${styles.Photos} ${menuOpen ? styles.Opacity : ""}`}>
       <h1 className={styles.tittle}>Photos Briefcase</h1>
       <main>
         <section>

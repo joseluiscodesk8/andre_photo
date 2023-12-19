@@ -14,7 +14,7 @@ const Films = () => {
   return (
     <>
       <section
-        className={`${styles.Videos} ${menuOpen ? styles.VideosOpacity : ""}`}
+        className={`${styles.Videos} ${menuOpen ? styles.Opacity : ""}`}
       >
         <main>
           <h1>All My Films</h1>
