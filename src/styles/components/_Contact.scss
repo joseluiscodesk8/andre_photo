@@ -8,12 +8,16 @@
   & main {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
     width: 100%;
-    border: 1px solid #ccc;
+    height: 500px;
+    // border: 1px solid #ccc;
+
     & picture {
       display: flex;
       width: 95%;
-      height: 100%;
+      height: 100px;
       margin: auto;
       padding: 2%;
       border-radius: 15px;
@@ -35,13 +39,23 @@
       position: relative;
       z-index: 1000;
       width: 95%;
-      // height: 330px;
+      height: 280px;
       padding: 2%;
       margin: auto;
       border-radius: 15px;
       background-image: url("/negativo2.png");
       background-size: 100% 100%;
-      border: 1px solid #ff00ff;
+      // border: 1px solid #ff00ff;
+
+      & section:nth-child(1), :nth-child(2) {
+        border: 1px solid #ccc;
+
+        & label {
+          position: absolute;
+          transform: translate(5px);
+          color: #000;
+        }
+      }
   
       & .comentario {
         width: 65%;
@@ -56,7 +70,11 @@
       }
   
       & button {
-        width: 50%;
+        width: 40%;
+        border-radius: 10px;
+        background: transparent;
+        color: #fff;
+        border-color: #fff;
       }
     }
   }

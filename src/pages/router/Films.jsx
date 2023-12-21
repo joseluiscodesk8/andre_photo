@@ -7,6 +7,7 @@ import videos from "../modelos/videos";
 import styles from "../../styles/index.module.scss";
 import 'swiper/css';
 import 'swiper/css/effect-creative';
+import { motion } from "framer-motion";
 
 const Films = () => {
   const { menuOpen, toggleMenu } = useMenuContext();
@@ -15,6 +16,7 @@ const Films = () => {
     if (menuOpen) {
       toggleMenu();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -22,6 +24,12 @@ const Films = () => {
       <section
         className={`${styles.Videos} ${menuOpen ? styles.Opacity : ""}`}
       >
+        <motion.section
+        initial={{ scale: 0.5, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.5, opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        >
         <main>
           <h1>All My Films</h1>
 
@@ -69,6 +77,7 @@ const Films = () => {
             </Swiper>
           </section>
         </main>
+        </motion.section>
       </section>
     </>
   );

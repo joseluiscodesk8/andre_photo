@@ -4,6 +4,7 @@ import styles from "../styles/index.module.scss";
 import { useMenuContext } from "../context/MenuContext";
 import { Inter } from "next/font/google";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
     if (menuOpen) {
       toggleMenu();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
