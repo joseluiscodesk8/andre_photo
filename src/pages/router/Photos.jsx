@@ -1,7 +1,8 @@
-import { useContext, useState, useRef, useEffect } from "react";
+// Photos.js
+import { useContext, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
-import Image from "next/image";
+import LazyImage from '../components/LazyImage'; // Import the LazyImage component
 import modelos from "../modelos/Modelos";
 import { useMenuContext } from "../../context/MenuContext";
 import styles from "../../styles/index.module.scss";
@@ -37,19 +38,12 @@ const Photos = () => {
             grabCursor={true}
             modules={[EffectCards]}
             className="mySwiper"
-            spaceBetween={15} // Espacio entre las tarjetas
-            slidesPerView={1} // Número de tarjetas visibles
+            spaceBetween={15}
+            slidesPerView={1}
           >
             {modelos.map((url, index) => (
               <SwiperSlide key={index}>
-                <picture>
-                  <Image
-                    src={url}
-                    alt={`Slide ${index + 1}`}
-                    width={250}
-                    height={350}
-                  />
-                </picture>
+                <LazyImage src={url} alt={`Slide ${index + 1}`} width={250} height={350} />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -57,7 +51,6 @@ const Photos = () => {
       </main>
       </motion.section>
       </section>
-      
     </>
   );
 };

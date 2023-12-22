@@ -1,31 +1,31 @@
 const videos = [
     {
         url: "https://www.youtube.com/embed/ZCdWpndXhLg",
-        tittle: "Goze Vídeo"
+        title: "Goze Vídeo"
     },
     {
         url: "https://www.youtube.com/embed/ZCdWpndXhLg",
-        tittle: "EXPO Panamá"
+        title: "EXPO Panamá"
     },
     {
         url: "https://www.youtube.com/embed/ZCdWpndXhLg",
-        tittle: "Teaser boda el valle"
+        title: "Teaser boda el valle"
     },
     {
         url: "https://www.youtube.com/embed/ZCdWpndXhLg",
-        tittle: "Nike La City"
+        title: "Nike La City"
     },
     {
         url: "https://www.youtube.com/embed/ZCdWpndXhLg",
-        tittle: "Nesh Del Monte - Vencer"
+        title: "Nesh Del Monte - Vencer"
     },
     {
         url: "https://www.youtube.com/embed/ZCdWpndXhLg",
-        tittle: "Cristopher Bustamante Away Without Leave"
+        title: "Cristopher Bustamante Away Without Leave"
     },
     {
         url: "https://www.youtube.com/embed/ZCdWpndXhLg",
-        tittle: "Póstumo - pfnme correcion portada"
+        title: "Póstumo - pfnme correcion portada"
     }
 ]
 

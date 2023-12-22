@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Head from "next/head";
 import styles from "../styles/index.module.scss";
 import { useMenuContext } from "../context/MenuContext";
+import LazyVideo from "./components/LazyVideo";
 import { Inter } from "next/font/google";
 
 
@@ -36,6 +37,7 @@ export default function Home() {
             frameBorder="0"
             allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            loading="lazy"
           ></iframe>
         </section>
       </main>
