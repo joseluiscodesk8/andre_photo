@@ -1,5 +1,5 @@
 import { useRef, useContext, useEffect } from "react";
-import Image from "next/image";
+import LazyImage from "../components/LazyImage";
 import { useMenuContext } from "@/context/MenuContext";
 import styles from "../../styles/index.module.scss";
 import { motion } from "framer-motion";
@@ -25,11 +25,12 @@ const About = () => {
         <main>
           <h1>I am Andres Niño.</h1>
           <picture>
-            <Image
+            <LazyImage
               src="https://static.wixstatic.com/media/fac730_a956e050cfe643cca685344219170aa3~mv2.jpg/v1/crop/x_0,y_67,w_1200,h_664/fill/w_940,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/32430396_10156759793597923_9142966400782958592_n_edited.jpg"
               alt="image"
               width={150}
               height={200}
+              loading="lazy"
             />
           </picture>
           <p>

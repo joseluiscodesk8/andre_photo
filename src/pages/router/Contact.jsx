@@ -1,6 +1,6 @@
 import { useState, useRef, useContext, useEffect } from "react";
 import { useMenuContext } from "@/context/MenuContext";
-import Image from "next/image";
+import LazyImage from "../components/LazyImage";
 import styles from "../../styles/index.module.scss";
 import { motion } from "framer-motion";
 
@@ -27,14 +27,16 @@ const Contact = () => {
       <main>
       <section>
       <picture>
-        <Image
+        <LazyImage
           src="https://static.wixstatic.com/media/fac730_9fa537eb9a3247e4a65cc2d31f1b71fb~mv2.jpg/v1/fill/w_1189,h_440,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/fac730_9fa537eb9a3247e4a65cc2d31f1b71fb~mv2.jpg"
           alt="image"
           width={150}
           height={200}
+          loading="lazy"
         />
       </picture>
       </section>
+
       <section>
       <form>
         <section>

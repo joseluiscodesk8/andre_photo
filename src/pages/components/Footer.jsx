@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LazyImage from "./LazyImage";
 import styles from "../../styles/index.module.scss";
 
 const size = 20;
@@ -9,19 +9,19 @@ const Footer = () => {
       <section>
         <span>
           <i>
-            <Image src="/insta.png" alt="icon" width={size} height={size} />
+            <LazyImage src="/insta.png" alt="icon" width={size} height={size} />
           </i>
           @_pauperrimo
         </span>
         <span>
           <i>
-            <Image src="/letter.png" alt="icon" width={size} height={size} />
+            <LazyImage src="/letter.png" alt="icon" width={size} height={size} />
           </i>
           andres18860@gmail.com
         </span>
         <span>
           <i>
-            <Image src="/cell.png" alt="icon" width={size} height={size} />
+            <LazyImage src="/cell.png" alt="icon" width={size} height={size} />
           </i>
           +50761062712
         </span>

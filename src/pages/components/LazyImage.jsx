@@ -1,33 +1,28 @@
-// LazyImage.js
-import { useState, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-import Image from 'next/image';
+/* eslint-disable @next/next/no-img-element */
+import React, { useEffect, useRef } from "react";
 
-const LazyImage = ({ src, alt, width, height }) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-  });
-  const [loaded, setLoaded] = useState(false);
+
+const LazyImage = ({ src, alt, width = 300, height = 300 }) => {
+  const imageRef = useRef();
 
   useEffect(() => {
-    if (inView) {
-      setLoaded(true);
-    }
-  }, [inView]);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          imageRef.current.src = src;
+          observer.disconnect();
+        }
+      });
+    });
 
-  return (
-    <picture ref={ref} className={`lazy-image ${loaded ? 'loaded' : ''}`}>
-      {loaded && (
-        <Image
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          loading="lazy"
-        />
-      )}
-    </picture>
-  );
+    observer.observe(imageRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [src]);
+
+  return <img  ref={imageRef} alt={alt} width={width} height={height} />;
 };
 
 export default LazyImage;

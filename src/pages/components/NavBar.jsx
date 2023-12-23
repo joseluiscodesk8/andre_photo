@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useMenuContext } from "../../context/MenuContext";
+import LazyImage from "./LazyImage";
 import styles from "../../styles/index.module.scss";
 
 const NavBar = () => {
@@ -12,18 +13,18 @@ const NavBar = () => {
       <nav className={styles.menuPhoto}>
         <section>
           <picture>
-            <Image
-              src="/logowhite.png"
-              alt="icon"
-              width={100}
-              height={80}
-              loading="lazy"
+          <LazyImage
+            src="/logowhite.png"
+            alt={"logo"}
+            width={100}
+            height={80}
+            loading="lazy"
             />
           </picture>
 
           <picture onClick={toggleMenu}>
             {menuOpen ? (
-              <Image
+              <LazyImage
                 src="/camara2.png"
                 alt="icon"
                 width={50}
@@ -31,7 +32,7 @@ const NavBar = () => {
                 loading="lazy"
               />
             ) : (
-              <Image
+              <LazyImage
                 src="/camara.png"
                 alt="icon"
                 width={50}
