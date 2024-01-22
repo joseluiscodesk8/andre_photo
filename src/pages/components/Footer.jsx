@@ -8,21 +8,33 @@ const Footer = () => {
     <footer className={styles.feet}>
       <section>
         <span>
-          <i>
-            <LazyImage src="/insta.png" alt="icon" width={size} height={size} />
-          </i>
+          <LazyImage
+            src="/insta.png"
+            alt="icon"
+            width={size}
+            height={size}
+            loading="lazy"
+          />
           @_pauperrimo
         </span>
         <span>
-          <i>
-            <LazyImage src="/letter.png" alt="icon" width={size} height={size} />
-          </i>
+          <LazyImage
+            src="/letter.png"
+            alt="icon"
+            width={size}
+            height={size}
+            loading="lazy"
+          />
           andres18860@gmail.com
         </span>
         <span>
-          <i>
-            <LazyImage src="/cell.png" alt="icon" width={size} height={size} />
-          </i>
+          <LazyImage
+            src="/cell.png"
+            alt="icon"
+            width={size}
+            height={size}
+            loading="lazy"
+          />
           +50761062712
         </span>
       </section>

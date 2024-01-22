@@ -2,7 +2,8 @@
 import React, { useEffect, useRef } from "react";
 
 
-const LazyImage = ({ src, alt, width = 300, height = 300 }) => {
+
+const LazyImage = ({ src, alt, width, height }) => {
   const imageRef = useRef();
 
   useEffect(() => {

@@ -12,15 +12,13 @@ const NavBar = () => {
     <>
       <nav className={styles.menuPhoto}>
         <section>
-          <picture>
-          <LazyImage
-            src="/logowhite.png"
-            alt={"logo"}
+        <LazyImage
+            src="/logowhite1.png"
+            alt="logo"
             width={100}
             height={80}
             loading="lazy"
             />
-          </picture>
 
           <picture onClick={toggleMenu}>
             {menuOpen ? (
