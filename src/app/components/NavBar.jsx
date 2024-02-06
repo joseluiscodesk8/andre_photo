@@ -1,8 +1,12 @@
+'use client'
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/index.module.scss";
 
 const NavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
       <nav className={styles.menuPhoto}>
@@ -15,31 +19,41 @@ const NavBar = () => {
             loading="lazy"
           />
 
-          <picture>
-            <Image
+          <picture onClick={() => setMenuOpen(!menuOpen)}>
+            { menuOpen ? (
+              <Image
               src="/camara2.png"
               alt="icon"
               width={50}
               height={50}
               loading="lazy"
             />
+            ) : (
+              <Image
+              src="/camara.png"
+              alt="icon"
+              width={50}
+              height={50}
+              loading="lazy"
+            />
+            )}
           </picture>
         </section>
 
         <ul>
-          <li className={styles.menuOpen}>
+          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}>
             <Link href="/">Home</Link>
           </li>
-          <li>
-            <Link href="/router/Photos">Photos</Link>
+          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}>
+            <Link href="/Photos">Photos</Link>
           </li>
-          <li>
+          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}>
             <Link href="/router/Films">Films</Link>
           </li>
-          <li>
+          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}>
             <Link href="/router/About">About</Link>
           </li>
-          <li>
+          <li className={menuOpen ? styles.menuOpen : styles.menuClosed}>
             <Link href="/router/Contact">Contact</Link>
           </li>
         </ul>
