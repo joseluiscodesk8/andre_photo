@@ -1,5 +1,5 @@
-import LazyImage from "./LazyImage";
-import styles from "../../styles/index.module.scss";
+import Image from "next/image";
+import styles from "../styles/index.module.scss";
 
 const size = 20;
 
@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className={styles.feet}>
       <section>
         <span>
-          <LazyImage
+          <Image
             src="/insta.png"
             alt="icon"
             width={size}
@@ -18,7 +18,7 @@ const Footer = () => {
           @_pauperrimo
         </span>
         <span>
-          <LazyImage
+          <Image
             src="/letter.png"
             alt="icon"
             width={size}
@@ -28,7 +28,7 @@ const Footer = () => {
           andres18860@gmail.com
         </span>
         <span>
-          <LazyImage
+          <Image
             src="/cell.png"
             alt="icon"
             width={size}
