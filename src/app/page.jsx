@@ -1,6 +1,12 @@
+'use client'
+import { useContext, useEffect } from "react";
+import { useMenuContext } from "../context/MenuContext";
 import styles from "./styles/index.module.scss";
 
 export default function Home() {
+
+  const { menuOpen, toggleMenu } = useMenuContext();
+
   return (
     <>
       <main className={styles.andres}>

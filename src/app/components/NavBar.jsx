@@ -3,10 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useMenuContext } from "../../context/MenuContext";
 import styles from "../styles/index.module.scss";
 
 const NavBar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const { menuOpen, toggleMenu } = useMenuContext();
   return (
     <>
       <nav className={styles.menuPhoto}>
@@ -19,7 +20,7 @@ const NavBar = () => {
             loading="lazy"
           />
 
-          <picture onClick={() => setMenuOpen(!menuOpen)}>
+          <picture onClick={toggleMenu}>
             { menuOpen ? (
               <Image
               src="/camara2.png"
