@@ -26,37 +26,13 @@
     font-family: monospace;
   }
 
-  & section {
-    & iframe {
-      width: 100%;
-      height: 100%;
-    }
+  & iframe {
+    width: 100%;
+    height: 100%;
   }
-}
-
-
-.layoutOpen {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 75%;
-  // height: 70vh;
-  margin: auto;
-  opacity: 0.2;
-  filter: blur(10px);
 }
 
 .Opacity {
   opacity: 0.1;
   transition: opacity 0.5s ease-in-out;
-}
-
-.Layout {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-  background: linear-gradient(125deg, #1a1616cc, #444444, #1a1616cc);
-  background-repeat: no-repeat;
-  // border: 1px solid #000;
 }

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useMenuContext } from "../../context/MenuContext";
+import LazyImage from "../utils/LazyImage";
 import styles from "../styles/index.module.scss";
 
 const NavBar = () => {
@@ -12,7 +13,7 @@ const NavBar = () => {
     <>
       <nav className={styles.menuPhoto}>
         <section>
-          <Image
+          <LazyImage
             src="/logowhite1.png"
             alt="logo"
             width={100}

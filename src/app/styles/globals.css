@@ -16,6 +16,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  background: linear-gradient(125deg, #1a1616cc, #444444, #1a1616cc);
+  /* background: linear-gradient(125deg, #1a1616cc, #444444, #1a1616cc); */
+  background-image: url("/back.jpg");
   background-repeat: no-repeat;
+  background-size: 100% 100%;
 }

@@ -5,25 +5,25 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
 import modelos from "./modelos/Modelos";
-// import { useMenuContext } from "../../context/MenuContext";
+import { useMenuContext } from "../../context/MenuContext";
 import styles from "../styles/index.module.scss";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import { motion } from "framer-motion";
 
 const Photos = () => {
-//   const { menuOpen, toggleMenu } = useMenuContext();
+  const { menuOpen, toggleMenu } = useMenuContext();
 
-//   useEffect(() => {
-//     if (menuOpen) {
-//       toggleMenu();
-//     }
-//     // eslint-disable-next-line react-hooks/exhaustive-deps
-//   }, []);
+  useEffect(() => {
+    if (menuOpen) {
+      toggleMenu();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
-      <section className={styles.Photos}>
+      <section className={`${styles.Photos} ${menuOpen ? styles.Opacity : ""}`}>
         <motion.section
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -41,10 +41,11 @@ const Photos = () => {
                 spaceBetween={15}
                 slidesPerView={1}
               >
-                <SwiperSlide>
+                {modelos.map((url, index) => (
+                  <SwiperSlide key={index}>
                     <picture>
                       <Image
-                        src="/camara.png"
+                        src={url}
                         alt="image"
                         width={350}
                         height={400}
@@ -52,6 +53,7 @@ const Photos = () => {
                       />
                     </picture>
                   </SwiperSlide>
+                ))}
               </Swiper>
             </section>
           </main>

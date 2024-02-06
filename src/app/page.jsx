@@ -7,9 +7,16 @@ export default function Home() {
 
   const { menuOpen, toggleMenu } = useMenuContext();
 
+  useEffect(() => {
+    if (menuOpen) {
+      toggleMenu();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <>
-      <main className={styles.andres}>
+      <main className={`${styles.andres} ${menuOpen ? styles.Opacity : ""}`}>
         <h1>My Work</h1>
         <p>PATINANDO TODOS LOS MARDITOS DIAS</p>
         <iframe

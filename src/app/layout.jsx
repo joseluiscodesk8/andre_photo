@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import { MenuProvider } from "@/context/MenuContext";
 import "./styles/globals.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -13,10 +14,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <NavBar />
-        {children} <Footer />
-      </body>
+      <MenuProvider>
+        <body className={inter.className}>
+          <NavBar />
+          {children}
+          <Footer />
+        </body>
+      </MenuProvider>
     </html>
   );
 }
