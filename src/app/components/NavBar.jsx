@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { useMenuContext } from "../../context/MenuContext";
 import LazyImage from "../utils/LazyImage";
@@ -23,7 +22,7 @@ const NavBar = () => {
 
           <picture onClick={toggleMenu}>
             { menuOpen ? (
-              <Image
+              <LazyImage
               src="/camara2.png"
               alt="icon"
               width={50}
@@ -31,7 +30,7 @@ const NavBar = () => {
               loading="lazy"
             />
             ) : (
-              <Image
+              <LazyImage
               src="/camara.png"
               alt="icon"
               width={50}
@@ -50,13 +49,13 @@ const NavBar = () => {
             <Link href="/Photos">Photos</Link>
           </li>
           <li className={menuOpen ? styles.menuOpen : styles.menuClosed}>
-            <Link href="/router/Films">Films</Link>
+            <Link href="/Films">Films</Link>
           </li>
           <li className={menuOpen ? styles.menuOpen : styles.menuClosed}>
-            <Link href="/router/About">About</Link>
+            <Link href="/About">About</Link>
           </li>
           <li className={menuOpen ? styles.menuOpen : styles.menuClosed}>
-            <Link href="/router/Contact">Contact</Link>
+            <Link href="/Contact">Contact</Link>
           </li>
         </ul>
       </nav>
